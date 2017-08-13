@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="707.0" maxWidth="991.0" minHeight="707.0" minWidth="991.0" prefHeight="707.0" prefWidth="991.0" styleClass="anchor-pane" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quickquizquestions.ControllerMain">
+   <children>
+      <Pane id="another-pane-css" layoutX="499.0" layoutY="382.0" prefHeight="52.0" prefWidth="485.0">
+         <children>
+            <JFXButton layoutX="237.0" layoutY="12.0" prefHeight="27.0" prefWidth="238.0" text="Send" />
+            <TextField fx:id="corrText" layoutX="198.0" layoutY="11.0" maxHeight="28.0" maxWidth="29.0" minHeight="28.0" minWidth="29.0" prefHeight="28.0" prefWidth="29.0" />
+            <Label id="question-box-labels" layoutX="92.0" layoutY="15.0" prefHeight="20.0" prefWidth="101.0" text="Correct Answer:" />
+         </children>
+      </Pane>
+      <Pane id="table-view-background" layoutX="6.0" layoutY="67.0" prefHeight="308.0" prefWidth="485.0">
+         <children>
+            <VBox id="vbox" prefHeight="308.0" prefWidth="485.0">
+               <children>
+                  <Pane id="tree-view-header" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="446.0">
+                     <children>
+                        <Label layoutX="-54.0" layoutY="-2.0" prefHeight="27.0" prefWidth="144.0" text="Quick Quiz Questions" translateX="223.0" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Pane>
+                  <TableView fx:id="tableView" onMouseClicked="#tableRowSelect" prefHeight="244.0" prefWidth="481.0">
+                     <columns>
+                        <TableColumn fx:id="questionNumberCol" maxWidth="35.0" minWidth="35.0" prefWidth="35.0" resizable="false" text="#" />
+                        <TableColumn fx:id="topicCol" maxWidth="126.0" minWidth="126.0" prefWidth="126.0" resizable="false" text="Topic" />
+                        <TableColumn fx:id="questionCol" maxWidth="319.0" minWidth="319.0" prefWidth="319.0" resizable="false" text="Question" />
+                     </columns></TableView>
+                  <Pane id="tree-view-footer" prefHeight="48.0" prefWidth="481.0">
+                     <children>
+                        <JFXButton fx:id="btnQuestion" layoutX="188.0" layoutY="8.0" onAction="#exchangeSort" prefHeight="25.0" prefWidth="75.0" text="Question" />
+                        <JFXButton fx:id="btnTopic" layoutX="106.0" layoutY="8.0" onAction="#bubbleSort" prefHeight="25.0" prefWidth="75.0" text="Topic" />
+                        <JFXButton fx:id="btnQn" layoutX="70.0" layoutY="8.0" onAction="#selectionSort" prefHeight="27.0" prefWidth="29.0" text="#" />
+                        <Label layoutX="14.0" layoutY="9.0" prefHeight="25.0" prefWidth="56.0" text="Sort by:" />
+                        <Label layoutX="275.0" layoutY="12.0" prefHeight="20.0" prefWidth="192.0" text="Selection, Bubble &amp; Exchange." wrapText="true" />
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane id="another-pane-css" layoutX="499.0" layoutY="67.0" prefHeight="308.0" prefWidth="485.0">
+         <children>
+            <FlowPane layoutX="3.0" layoutY="6.0" prefHeight="278.0" prefWidth="479.0" translateY="10.0">
+               <children>
+                  <Label id="question-box-labels" maxHeight="33.0" minHeight="33.0" prefHeight="33.0" prefWidth="90.0" text="Topic:">
+                     <FlowPane.margin>
+                        <Insets right="30.0" />
+                     </FlowPane.margin>
+                     <padding>
+                        <Insets bottom="15.0" left="20.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="topicText" prefHeight="29.0" prefWidth="338.0" />
+                  <Label id="question-box-labels" maxHeight="65.0" minHeight="33.0" prefHeight="65.0" prefWidth="90.0" text="Question:">
+                     <FlowPane.margin>
+                        <Insets right="30.0" />
+                     </FlowPane.margin>
+                     <padding>
+                        <Insets bottom="45.0" left="20.0" />
+                     </padding>
+                  </Label>
+                  <TextArea fx:id="questionText" maxHeight="60.0" minHeight="60.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="60.0" prefWidth="338.0" wrapText="true" />
+                  <Label id="question-box-labels" maxHeight="51.0" minHeight="45.0" prefHeight="45.0" prefWidth="90.0" text="A:">
+                     <FlowPane.margin>
+                        <Insets right="30.0" />
+                     </FlowPane.margin>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <TextArea fx:id="aText" maxHeight="40.0" minHeight="40.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="338.0" wrapText="true" />
+                  <Label id="question-box-labels" maxHeight="45.0" minHeight="45.0" prefHeight="45.0" prefWidth="90.0" text="B:">
+                     <FlowPane.margin>
+                        <Insets right="30.0" />
+                     </FlowPane.margin>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <TextArea fx:id="bText" maxHeight="40.0" minHeight="40.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="338.0" wrapText="true" />
+                  <Label id="question-box-labels" maxHeight="45.0" minHeight="45.0" prefHeight="45.0" prefWidth="90.0" text="C:">
+                     <FlowPane.margin>
+                        <Insets right="30.0" />
+                     </FlowPane.margin>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <TextArea fx:id="cText" maxHeight="40.0" minHeight="40.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="338.0" wrapText="true" />
+                  <Label id="question-box-labels" maxHeight="45.0" minHeight="45.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="45.0" prefWidth="90.0" text="D:">
+                     <FlowPane.margin>
+                        <Insets right="30.0" />
+                     </FlowPane.margin>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <TextArea fx:id="dText" maxHeight="40.0" minHeight="40.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="338.0" wrapText="true" />
+               </children>
+            </FlowPane>
+         </children>
+      </Pane>
+      <Pane prefHeight="60.0" prefWidth="991.0" styleClass="header">
+         <children>
+            <Label id="header-label" layoutX="370.0" layoutY="11.0" prefHeight="38.0" prefWidth="266.0" text="Quick Quiz by Network">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane id="another-pane-css" layoutX="6.0" layoutY="382.0" prefHeight="156.0" prefWidth="485.0">
+         <children>
+            <Label id="question-box-labels" layoutX="14.0" layoutY="15.0" prefHeight="20.0" prefWidth="101.0" text="Linked List:" />
+            <TextArea layoutX="15.0" layoutY="46.0" prefHeight="96.0" prefWidth="456.0" />
+         </children>
+      </Pane>
+      <Pane id="another-pane-css" layoutX="6.0" layoutY="544.0" prefHeight="156.0" prefWidth="485.0">
+         <children>
+            <Label id="question-box-labels" layoutX="14.0" layoutY="15.0" prefHeight="20.0" prefWidth="101.0" text="Binary Tree:" />
+            <TextArea layoutX="15.0" layoutY="46.0" prefHeight="96.0" prefWidth="456.0" />
+            <JFXButton layoutX="341.0" layoutY="11.0" prefHeight="27.0" prefWidth="129.0" text="Display" />
+         </children>
+      </Pane>
+      <Pane id="another-pane-css" layoutX="499.0" layoutY="440.0" prefHeight="127.0" prefWidth="156.0">
+         <children>
+            <JFXButton layoutX="14.0" layoutY="46.0" prefHeight="27.0" prefWidth="129.0" text="Display" />
+            <JFXButton layoutX="14.0" layoutY="85.0" prefHeight="27.0" prefWidth="129.0" text="Save" />
+            <Label id="question-box-labels" layoutX="47.0" layoutY="12.0" text="Pre-Order" />
+         </children>
+      </Pane>
+      <Pane id="another-pane-css" layoutX="664.0" layoutY="440.0" prefHeight="127.0" prefWidth="156.0">
+         <children>
+            <JFXButton layoutX="14.0" layoutY="44.0" prefHeight="27.0" prefWidth="129.0" text="Display" />
+            <JFXButton layoutX="14.0" layoutY="83.0" prefHeight="27.0" prefWidth="129.0" text="Save" />
+            <Label id="question-box-labels" layoutX="47.0" layoutY="12.0" text="In-Order" />
+         </children>
+      </Pane>
+      <Pane id="another-pane-css" layoutX="828.0" layoutY="440.0" prefHeight="127.0" prefWidth="156.0">
+         <children>
+            <JFXButton layoutX="14.0" layoutY="44.0" prefHeight="27.0" prefWidth="129.0" text="Display" />
+            <JFXButton layoutX="14.0" layoutY="83.0" prefHeight="27.0" prefWidth="129.0" text="Save" />
+            <Label id="question-box-labels" layoutX="47.0" layoutY="12.0" text="Post-Order" />
+         </children>
+      </Pane>
+      <JFXButton fx:id="btnExit" buttonType="RAISED" layoutX="501.0" layoutY="576.0" onAction="#exit" prefHeight="122.0" prefWidth="481.0" ripplerFill="#111111" text="Exit">
+         <font>
+            <Font size="18.0" />
+         </font></JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="547.0" prefWidth="499.0" styleClass="anchor-pane" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quickquizquestions.ControllerMain">
+    <children>
+      <Pane prefHeight="60.0" prefWidth="499.0" styleClass="header">
+         <children>
+            <Label id="header-label" layoutX="198.0" layoutY="11.0" prefHeight="38.0" prefWidth="126.0" text="Quick Quiz">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane id="table-view-background" layoutX="7.0" layoutY="66.0" prefHeight="473.0" prefWidth="485.0">
+         <children>
+            <VBox id="vbox" prefHeight="473.0" prefWidth="485.0">
+               <children>
+                  <Pane id="tree-view-header" nodeOrientation="LEFT_TO_RIGHT" prefHeight="54.0" prefWidth="481.0">
+                     <children>
+                        <Label layoutX="-199.0" layoutY="14.0" prefHeight="27.0" prefWidth="84.0" text="Your Name:" translateX="223.0" />
+                        <TextField layoutX="124.0" layoutY="13.0" prefHeight="29.0" prefWidth="338.0" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Pane>
+                  <Pane id="tree-view-header" prefHeight="50.0" prefWidth="481.0">
+                     <children>
+                        <Pane layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="461.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="8.0" prefHeight="27.0" prefWidth="225.0" text="Enter your name and click submit:" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane id="tree-view-header" prefHeight="313.0" prefWidth="481.0">
+                     <children>
+                        <FlowPane layoutX="3.0" layoutY="6.0" prefHeight="278.0" prefWidth="479.0" translateY="10.0">
+                           <children>
+                              <Label id="question-box-labels" maxHeight="33.0" minHeight="33.0" prefHeight="33.0" prefWidth="90.0" text="Topic:">
+                                 <FlowPane.margin>
+                                    <Insets right="30.0" />
+                                 </FlowPane.margin>
+                                 <padding>
+                                    <Insets bottom="15.0" left="20.0" />
+                                 </padding>
+                              </Label>
+                              <TextField editable="false" prefHeight="29.0" prefWidth="338.0">
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor></TextField>
+                              <Label id="question-box-labels" maxHeight="65.0" minHeight="33.0" prefHeight="65.0" prefWidth="90.0" text="Question:">
+                                 <FlowPane.margin>
+                                    <Insets right="30.0" />
+                                 </FlowPane.margin>
+                                 <padding>
+                                    <Insets bottom="45.0" left="20.0" />
+                                 </padding>
+                              </Label>
+                              <TextArea editable="false" maxHeight="60.0" minHeight="60.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="60.0" prefWidth="338.0" wrapText="true">
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor></TextArea>
+                              <Label id="question-box-labels" maxHeight="51.0" minHeight="45.0" prefHeight="45.0" prefWidth="90.0" text="A:">
+                                 <FlowPane.margin>
+                                    <Insets right="30.0" />
+                                 </FlowPane.margin>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <TextArea editable="false" maxHeight="40.0" minHeight="40.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="338.0" wrapText="true">
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor></TextArea>
+                              <Label id="question-box-labels" maxHeight="45.0" minHeight="45.0" prefHeight="45.0" prefWidth="90.0" text="B:">
+                                 <FlowPane.margin>
+                                    <Insets right="30.0" />
+                                 </FlowPane.margin>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <TextArea editable="false" maxHeight="40.0" minHeight="40.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="338.0" wrapText="true">
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor></TextArea>
+                              <Label id="question-box-labels" maxHeight="45.0" minHeight="45.0" prefHeight="45.0" prefWidth="90.0" text="C:">
+                                 <FlowPane.margin>
+                                    <Insets right="30.0" />
+                                 </FlowPane.margin>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <TextArea editable="false" maxHeight="40.0" minHeight="40.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="338.0" wrapText="true">
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor></TextArea>
+                              <Label id="question-box-labels" maxHeight="45.0" minHeight="45.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="45.0" prefWidth="90.0" text="D:">
+                                 <FlowPane.margin>
+                                    <Insets right="30.0" />
+                                 </FlowPane.margin>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <TextArea editable="false" maxHeight="40.0" minHeight="40.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="338.0" wrapText="true">
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor></TextArea>
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </Pane>
+                  <Pane id="tree-view-header" prefHeight="55.0" prefWidth="481.0">
+                     <children>
+                        <JFXButton layoutX="358.0" layoutY="14.0" prefHeight="27.0" prefWidth="100.0" text="Exit" />
+                        <JFXButton layoutX="159.0" layoutY="14.0" prefHeight="27.0" prefWidth="100.0" text="Submit" />
+                        <Label layoutX="21.0" layoutY="15.0" prefHeight="25.0" prefWidth="90.0" text="Your Answer:" />
+                        <TextField layoutX="123.0" layoutY="13.0" prefHeight="29.0" prefWidth="29.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
